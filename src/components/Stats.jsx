@@ -1,4 +1,6 @@
 import { MegaphoneIcon, GlobeAltIcon, UsersIcon } from "@heroicons/react/24/outline";
+import cardImage1 from '../assets/2.jpg';
+import cardImage2 from '../assets/3.jpg';
 
 export default function Stats() {
   const stats = [
@@ -51,7 +53,7 @@ export default function Stats() {
           {/* Card 1 */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden text-left">
             <img 
-              src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=600&q=80" 
+              src={cardImage1} 
               alt="Youth Campaign" 
               className="w-full object-cover h-64"
             />
@@ -66,7 +68,7 @@ export default function Stats() {
           {/* Card 2 */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden text-left">
             <img 
-              src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" 
+              src={cardImage2} 
               alt="Group Work" 
               className="w-full object-cover h-64"
             />

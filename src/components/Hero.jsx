@@ -1,3 +1,4 @@
+import heroBgImage from '../assets/hero-bg.jpg';
 
 const Hero = () => {
   return (
@@ -5,15 +6,15 @@ const Hero = () => {
         {/* Hero Section */}
       <section
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+        style={{ backgroundImage: `url(${heroBgImage})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-green-900/60 to-blue-900/40"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
             Amplifying Youth Voices <br /> for Global Goals
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-gray-200">
+          <p className="mt-6 text-lg md:text-xl text-white">
             Empowering young people to shape policies, drive grassroots action, and build a sustainable future.
           </p>
 
