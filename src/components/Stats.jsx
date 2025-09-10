@@ -20,18 +20,67 @@ export default function Stats() {
   ];
 
   return (
-    <section className="bg-white py-16">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-        {stats.map((stat, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-6">
-              {stat.icon}
+    <>
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+          {stats.map((stat, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-6">
+                {stat.icon}
+              </div>
+              <h3 className="text-xl font-bold text-gray-900">{stat.title}</h3>
+              <p className="mt-2 text-gray-600 text-sm">{stat.description}</p>
             </div>
-            <h3 className="text-xl font-bold text-gray-900">{stat.title}</h3>
-            <p className="mt-2 text-gray-600 text-sm">{stat.description}</p>
+          ))}
+        </div>
+      </section>
+
+      <section className="pt-15 pb-12 bg-white text-center px-4">
+        {/* Heading */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Empowering the Next Generation of <br className="hidden sm:block"/> Changemakers
+        </h1>
+        <p className="text-gray-600 max-w-3xl mx-auto mb-10">
+          We are a global youth network advancing advocacy, innovation, and grassroots action 
+          for the UN SDGs. Our mission is to empower youth to influence policy and drive sustainable 
+          solutions for a better world.
+        </p>
+
+        {/* Images Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Card 1 */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden text-left">
+            <img 
+              src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=600&q=80" 
+              alt="Youth Campaign" 
+              className="w-full object-cover h-64"
+            />
+            <div className="p-4">
+              <h3 className="text-xl font-bold text-gray-800 mb-2">Our Vision</h3>
+              <p className="text-gray-600 text-md">
+                A world where youth-led action delivers development and equity, creating lasting change for communities worldwide through sustainable solutions.
+              </p>
+            </div>
           </div>
-        ))}
-      </div>
-    </section>
+
+          {/* Card 2 */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden text-left">
+            <img 
+              src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" 
+              alt="Group Work" 
+              className="w-full object-cover h-64"
+            />
+            <div className="p-4">
+              <h3 className="text-xl font-bold text-gray-800 mb-2">Our Approach</h3>
+              <p className="text-gray-600 text-md">
+                Through education, advocacy, and direct action, we build capacity in young leaders and create platforms for meaningful participation in global development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
+
+
