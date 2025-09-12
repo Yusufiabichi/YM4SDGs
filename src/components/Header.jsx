@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ymsdgLogo from '../assets/ym4sdgs-logo.jpg';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,10 +11,15 @@ export default function Header() {
           
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+            {/* <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
               <span className="text-white font-bold">Y</span>
             </div>
-            <span className="font-bold text-lg">YM4SDGs</span>
+            <span className="font-bold text-lg">YM4SDGs</span> */}
+            <img 
+              src={ymsdgLogo} 
+              alt="ym4sdgs-logo" 
+              style={{ width: '150px' }}
+            />
           </div>
 
           {/* Desktop Menu */}
