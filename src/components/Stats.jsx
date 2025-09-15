@@ -1,4 +1,5 @@
 import { MegaphoneIcon, GlobeAltIcon, UsersIcon } from "@heroicons/react/24/outline";
+import { EyeIcon, LightBulbIcon } from "@heroicons/react/24/outline";
 import cardImage1 from '../assets/2.jpg';
 import cardImage2 from '../assets/3.jpg';
 
@@ -40,7 +41,7 @@ export default function Stats() {
       <section className="pt-15 pb-12 bg-white text-center px-4">
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          Empowering the Next Generation of <br className="hidden sm:block"/> Changemakers
+          Empowering the Next Generation of <br className="hidden sm:block" /> Changemakers
         </h1>
         <p className="text-gray-600 max-w-3xl mx-auto mb-10">
           We are a global youth network advancing advocacy, innovation, and grassroots action 
@@ -48,39 +49,32 @@ export default function Stats() {
           solutions for a better world.
         </p>
 
-        {/* Images Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Card 1 */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden text-left">
-            <img 
-              src={cardImage1} 
-              alt="Youth Campaign" 
-              className="w-full object-cover h-64"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Our Vision</h3>
-              <p className="text-gray-600 text-md">
-                A world where youth-led action delivers development and equity, creating lasting change for communities worldwide through sustainable solutions.
-              </p>
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Card 1 - Vision */}
+          <div className="bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow p-6 text-left">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-indigo-100 mb-4">
+              <EyeIcon className="w-8 h-8 text-indigo-600" />
             </div>
+            <h3 className="text-xl font-bold text-gray-800 mb-2">Our Vision</h3>
+            <p className="text-gray-600 text-md">
+              A world where youth-led action delivers development and equity, creating lasting change for communities worldwide through sustainable solutions.
+            </p>
           </div>
 
-          {/* Card 2 */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden text-left">
-            <img 
-              src={cardImage2} 
-              alt="Group Work" 
-              className="w-full object-cover h-64"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Our Approach</h3>
-              <p className="text-gray-600 text-md">
-                Through education, advocacy, and direct action, we build capacity in young leaders and create platforms for meaningful participation in global development.
-              </p>
+          {/* Card 2 - Approach */}
+          <div className="bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow p-6 text-left">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-4">
+              <LightBulbIcon className="w-8 h-8 text-green-600" />
             </div>
+            <h3 className="text-xl font-bold text-gray-800 mb-2">Our Approach</h3>
+            <p className="text-gray-600 text-md">
+              Through education, advocacy, and direct action, we build capacity in young leaders and create platforms for meaningful participation in global development.
+            </p>
           </div>
         </div>
       </section>
+
     </>
   );
 }
