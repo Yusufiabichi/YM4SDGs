@@ -2,7 +2,7 @@ import { MapPinIcon, UserGroupIcon, ClockIcon } from "@heroicons/react/24/outlin
 
 export default function FeaturedPrograms() {
   return (
-    <section className="py-16 bg-white text-center px-6">
+    <section id="programs" className="py-16 bg-white text-center px-6">
       {/* Heading */}
       <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
         Featured Programs

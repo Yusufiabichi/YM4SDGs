@@ -25,11 +25,11 @@ export default function Header() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
             <a href="#" className="text-gray-700 hover:text-green-600">Home</a>
-            <a href="#" className="text-gray-700 hover:text-green-600">About</a>
-            <a href="#" className="text-gray-700 hover:text-green-600">Programs</a>
-            <a href="#" className="text-gray-700 hover:text-green-600">Our Work</a>
-            <a href="#" className="text-gray-700 hover:text-green-600">Get Involved</a>
-            <a href="#" className="text-gray-700 hover:text-green-600">Contact</a>
+            <a href="#about" className="text-gray-700 hover:text-green-600">About</a>
+            <a href="#programs" className="text-gray-700 hover:text-green-600">Programs</a>
+            <a href="#our-work" className="text-gray-700 hover:text-green-600">Our Work</a>
+            <a href="#involved" className="text-gray-700 hover:text-green-600">Get Involved</a>
+            <a href="#contact" className="text-gray-700 hover:text-green-600">Contact</a>
             <button className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700">
               Join Us
             </button>
@@ -51,11 +51,11 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden bg-white px-4 pb-4 space-y-2 shadow-lg">
           <a href="#" className="block text-gray-700">Home</a>
-          <a href="#" className="block text-gray-700">About</a>
-          <a href="#" className="block text-gray-700">Programs</a>
-          <a href="#" className="block text-gray-700">Our Work</a>
-          <a href="#" className="block text-gray-700">Get Involved</a>
-          <a href="#" className="block text-gray-700">Contact</a>
+          <a href="#about" className="block text-gray-700">About</a>
+          <a href="#programs" className="block text-gray-700">Programs</a>
+          <a href="#our-work" className="block text-gray-700">Our Work</a>
+          <a href="#involved" className="block text-gray-700">Get Involved</a>
+          <a href="#contact" className="block text-gray-700">Contact</a>
           <button className="w-full bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700">
             Join Us
           </button>

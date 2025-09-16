@@ -24,7 +24,7 @@ export default function Stats() {
 
   return (
     <>
-      <section className="bg-gray-50 py-16">
+      <section id="stats" className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center">
@@ -38,7 +38,7 @@ export default function Stats() {
         </div>
       </section>
 
-      <section className="pt-15 pb-12 bg-white text-center px-4">
+      <section id="about" className="py-16 bg-white text-center px-6">
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           Empowering the Next Generation of <br className="hidden sm:block" /> Changemakers
