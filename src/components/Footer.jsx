@@ -38,10 +38,12 @@ export default function Footer() {
           {/* Logo + About */}
           <div>
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center text-white font-bold">
+                <img src="./assets/ym4sdgs-logo.jpg" alt="ym4sdgs-logo" />
+
+              {/* <div className="w-10 h-10 rounded-full bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center text-white font-bold">
                 🌍
               </div>
-              <h3 className="text-lg font-bold text-white">YM4SDGs</h3>
+              <h3 className="text-lg font-bold text-white">YM4SDGs</h3> */}
             </div>
             <p className="mt-4 text-sm">
               Empowering young people to shape policies, drive grassroots
