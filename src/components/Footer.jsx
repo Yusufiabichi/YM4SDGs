@@ -92,14 +92,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
-        {/* Footer credit */}
-        <div className="mt-12 flex justify-end">
-          <div className="bg-gray-800 rounded-lg px-4 py-2 text-gray-400 text-sm flex items-center space-x-2">
-            <span>Designed by</span>
-            <span className="font-semibold text-white">Readdy</span>
-          </div>
-        </div>
       </section>
     </footer>
   );
