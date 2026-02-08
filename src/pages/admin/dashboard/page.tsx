@@ -34,6 +34,7 @@ interface Program {
   requirements?: string[];
   benefits?: string[];
   schedule?: Array<{ time: string; activity: string }>;
+  registration_form_url?: string;
 }
 
 interface Message {
@@ -315,6 +316,7 @@ export default function AdminDashboardPage() {
           requirements: formData.requirements,
           benefits: formData.benefits,
           schedule: formData.schedule,
+          registration_form_url: formData.registrationFormUrl || null,
           participants: 0
         }]);
 
@@ -350,7 +352,8 @@ export default function AdminDashboardPage() {
           sdgs: formData.sdgs,
           requirements: formData.requirements,
           benefits: formData.benefits,
-          schedule: formData.schedule
+          schedule: formData.schedule,
+          registration_form_url: formData.registrationFormUrl || null
         })
         .eq('id', selectedProgram.id);
 
@@ -583,7 +586,7 @@ export default function AdminDashboardPage() {
 
   const stats = [
     { label: 'Total Volunteers', value: volunteers.length.toString(), icon: 'ri-group-line', color: 'from-red-500 to-red-600' },
-    { label: 'Active Programs', value: programs.filter(p => p.status === 'ongoing' || 'upcoming').length.toString(), icon: 'ri-calendar-line', color: 'from-green-500 to-green-600' },
+    { label: 'Active Programs', value: programs.filter(p => p.status === 'ongoing').length.toString(), icon: 'ri-calendar-line', color: 'from-green-500 to-green-600' },
     { label: 'Unread Messages', value: messages.filter(m => m.status === 'unread').length.toString(), icon: 'ri-mail-line', color: 'from-blue-500 to-blue-600' },
     { label: 'Published Blogs', value: blogs.filter(b => b.status === 'published').length.toString(), icon: 'ri-article-line', color: 'from-yellow-500 to-yellow-600' }
   ];
@@ -1090,7 +1093,8 @@ export default function AdminDashboardPage() {
                   sdgs,
                   requirements,
                   benefits,
-                  schedule
+                  schedule,
+                  registrationFormUrl: formData.get('registrationFormUrl') as string
                 };
                 
                 if (isEditMode) {
@@ -1236,7 +1240,7 @@ export default function AdminDashboardPage() {
                       />
                     </div>
                     <p className="text-xs text-gray-500 mt-2">
-                      Tip: Use Stable Diffusion format like https://imageurl/api/image%&width=800&height=600&seq=prog1&orientation=landscape
+                      Tip: Use Stable Diffusion format like https://image-website/api/search-image-id
                     </p>
                   </div>
                 </div>
@@ -1407,6 +1411,23 @@ export default function AdminDashboardPage() {
                         <option value="completed">Completed</option>
                       </select>
                     </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      Registration Form URL (Optional)
+                    </label>
+                    <input 
+                      type="url"
+                      name="registrationFormUrl"
+                      defaultValue={selectedProgram?.registration_form_url || ''}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all"
+                      placeholder="https://forms.google.com/..."
+                    />
+                    <p className="text-xs text-gray-500 mt-2">
+                      <i className="ri-information-line mr-1"></i>
+                      If provided, the "Register Now" button will open this external form instead of the built-in registration form
+                    </p>
                   </div>
                 </div>
 

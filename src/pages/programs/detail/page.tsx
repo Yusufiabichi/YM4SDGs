@@ -144,6 +144,16 @@ export default function ProgramDetailPage() {
     }
   };
 
+  const handleRegisterClick = () => {
+    if (program?.registration_form_url) {
+      // Open external form in new tab
+      window.open(program.registration_form_url, '_blank', 'noopener,noreferrer');
+    } else {
+      // Show built-in registration form
+      setShowRegistrationForm(true);
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
@@ -271,10 +281,11 @@ export default function ProgramDetailPage() {
           </div>
 
           <button
-            onClick={() => setShowRegistrationForm(true)}
-            className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-500 transition-all hover:scale-105 flex items-center gap-2 whitespace-nowrap cursor-pointer"
+            onClick={handleRegisterClick}
+            className="bg-teal-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-teal-700 transition-all flex items-center gap-3 whitespace-nowrap cursor-pointer shadow-lg hover:shadow-xl"
           >
-            Register for This Program <i className="ri-arrow-right-line"></i>
+            <i className="ri-user-add-line text-2xl"></i>
+            Register Now
           </button>
         </div>
       </section>
@@ -382,7 +393,7 @@ export default function ProgramDetailPage() {
                   Register now and be part of this transformative program!
                 </p>
                 <button
-                  onClick={() => setShowRegistrationForm(true)}
+                  onClick={handleRegisterClick}
                   className="w-full bg-gray-900 text-white px-6 py-3 rounded-full font-bold hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap cursor-pointer"
                 >
                   Register Now
@@ -600,9 +611,9 @@ export default function ProgramDetailPage() {
           </div>
         </div>
       )}
-      <BackToTop />
 
       {/* Footer */}
+      <BackToTop />
       <Footer />
     </div>
   );
